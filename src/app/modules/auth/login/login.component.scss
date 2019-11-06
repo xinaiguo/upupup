@@ -1,0 +1,46 @@
+.container{
+    box-sizing: border-box;
+    background-color: white;
+    margin-top: 100px;
+    padding: 50px 300px;
+    border:1px solid #edf1f7;
+    border-radius: 5px;
+    .title{
+       text-align: center; 
+    }
+    .sub-title{
+        text-align: center; 
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    label{
+        color: #8f9bb3;
+    }
+    input{
+        background-color: #f7f9fc;
+    }
+    a{
+        color: #8f9bb3;
+    }
+    button{
+        background-color:rgba(143,155,179,.24) ;
+        color: rgba(143,155,179,.48);
+        border-color:transparent;
+        width: 100%;
+    }
+    .remember{
+        padding-left:10px ;
+        color: #192038;
+        font-weight: 600;
+        vertical-align: middle;
+    }
+    .checkbox{
+        width: 20px;
+        height: 20px;
+    }
+    section{
+        text-align: center;
+    }
+
+}
+
