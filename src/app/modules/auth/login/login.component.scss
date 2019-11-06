@@ -1,15 +1,15 @@
 .container{
     box-sizing: border-box;
     background-color: white;
-    margin-top: 100px;
-    padding: 50px 300px;
+    margin-top: 50px;
+    padding: 25px 300px;
     border:1px solid #edf1f7;
     border-radius: 5px;
     .title{
-       text-align: center; 
+       text-align: center;
     }
     .sub-title{
-        text-align: center; 
+        text-align: center;
         margin-bottom: 20px;
         margin-top: 10px;
     }
@@ -19,14 +19,15 @@
     input{
         background-color: #f7f9fc;
     }
-    a{
-        color: #8f9bb3;
-    }
+
     button{
         background-color:rgba(143,155,179,.24) ;
         color: rgba(143,155,179,.48);
         border-color:transparent;
         width: 100%;
+    }
+    .remember-me{
+      margin:20px 0;
     }
     .remember{
         padding-left:10px ;
@@ -40,6 +41,16 @@
     }
     section{
         text-align: center;
+        margin:20px 0;
+        .social{
+          margin-top: 20px;
+        }
+        a{
+          color: #8f9bb3;
+        }
+        a:nth-child(2){
+          margin: 0 25px;
+        }
     }
 
 }
