@@ -5,18 +5,19 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { LoginComponent } from './modules/auth/login/login.component';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
-
+import { AuthModule } from './modules/auth/auth.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AuthModule,
     AppRoutingModule,
     HttpClientModule,
-    AngularFontAwesomeModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

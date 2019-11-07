@@ -1,0 +1,75 @@
+.container {
+  background-color: white;
+  border: 1px solid #edf1f7;
+  border-radius: 5px;
+  padding: 16px 200px;
+
+  position: absolute;
+  width: 1200px;
+  height: 650px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  .register-container {
+    min-width: 150px;
+
+    .title {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    label {
+      color: #8f9bb3;
+    }
+
+    input {
+      background-color: #f7f9fc;
+      color: rgba(143, 155, 179, .48);
+      font-size: 14px;
+    }
+
+    button {
+      background-color: rgba(143, 155, 179, .24);
+      color: rgba(143, 155, 179, .48);
+      border-color: transparent;
+      width: 100%;
+    }
+
+    .agree-terms {
+      margin: 20px 0;
+    }
+
+    .agree {
+      padding-left: 10px;
+      color: #192038;
+      font-weight: 600;
+      vertical-align: middle;
+    }
+
+    .checkbox {
+      width: 20px;
+      height: 20px;
+    }
+
+    section {
+      text-align: center;
+      margin: 20px 0;
+
+      .social {
+        margin-top: 20px;
+      }
+
+      a {
+        color: #8f9bb3;
+      }
+
+      a:nth-child(2) {
+        margin: 0 25px;
+      }
+    }
+  }
+
+}
