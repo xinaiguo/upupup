@@ -13,9 +13,12 @@
                     pattern=".+@.+\..+"
                     formControlName="email"
                 >
-                <ng-container *ngIf="isFieldValueValid(email)" class="alert alert-danger">
-                    <p>
+                <ng-container *ngIf="email.invalid && email.touched" class="danger">
+                    <p *ngIf="email.errors.required">
                         Email is required!
+                    </p>
+                    <p *ngIf="email.errors.pattern">
+                        Email should be the real one!
                     </p>
                 </ng-container>
             </div>
@@ -27,7 +30,15 @@
                     class="form-control" 
                     placeholder="Password"
                     formControlName="password"
-                    >
+                >
+                <ng-container *ngIf="password.invalid && (password.touched || password.dirty)" class="alert alert-danger">
+                    <p *ngIf="password.errors.required">
+                        Password is required!
+                    </p>
+                    <p *ngIf="password.errors.minlength || password.errors.maxlength">
+                        Password should contain from 4 to 5 charactors
+                    </p>
+                </ng-container>
             </div>
             <div class="remember-me">
                 <input type="checkbox" class="checkbox" id="checkbox">
