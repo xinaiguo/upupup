@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeModule } from './modules/home/home.module';
+import { TaobaoModule } from './modules/taobao/taobao.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { HomeModule } from './modules/home/home.module';
     BrowserAnimationsModule,
     AuthModule,
     HomeModule,
+    TaobaoModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,

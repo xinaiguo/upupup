@@ -1,0 +1,31 @@
+.cover{
+    background: #f5f5f5;
+    .site-nav-bd{
+        width: 1190px;
+        height: 35px;
+        margin: 0 auto;
+        font-size: 12px;
+
+        .site-nav-bd-l{
+            .site-nav-menu-bd{
+                display: none;
+            }
+            .site-nav-login{
+                color:  #f22e00!important;
+            }
+        }
+        
+        li{
+            float: left;
+            margin:0 5px;
+            line-height: 35px;
+        }
+
+        a{
+            color:#3c3c3c ;
+        }
+    }
+    
+    
+}
+ 

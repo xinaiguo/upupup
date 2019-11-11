@@ -1,7 +1,19 @@
-.container{
-    .module{
-        width: 100px;
-        height: 100px;
-        background-color: red;
-    }
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  .module {
+    width: 100px;
+    height: 100px;
+    background-color: #93a6c9;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+  }
 }

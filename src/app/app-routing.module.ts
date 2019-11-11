@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: './modules/home/home.module#HomeModule'
+  },
+  {
+    path: 'taobao',
+    loadChildren: './modules/taobao/taobao.module#TaobaoModule'
   }
 ];
 
