@@ -6,7 +6,7 @@
           <span class="site-nav-region">中国大陆</span>
           <span class="site-nav-icon"><i class="fas fa-chevron-down"></i></span>
         </div>
-        <div class="site-nav-menu-bd">
+        <div class="site-nav-menu-bd site-nav-menu-list">
           <ul>
             <li>全球</li>
             <li>中国大陆</li>
@@ -24,15 +24,68 @@
           <a [routerLink]="['/register']">免费注册</a>
         </div>
       </li>
-      <li>手机逛淘宝</li>
+      <li>
+        <div>
+          <a href="//www.taobao.com/m" target="_top">
+            <span>手机逛淘宝</span>
+          </a>
+        </div>
+      </li>
     </ul>
     <ul class="site-nav-bd-r fr">
-      <li>我的淘宝</li>
-      <li>购物车</li>
-      <li>收藏夹</li>
-      <li>商品分类</li>
-      <li>千牛卖家中心</li>
+      <li class="site-nav-menu">
+        <div>
+          <a [routerLink]="['/login']"><span>我的淘宝</span></a>
+          <span><i class="fas fa-chevron-down"></i></span>
+        </div>
+        <div class="site-nav-menu-bd site-nav-menu-list">
+          <div>
+            <a href="#">已买到的宝贝</a>
+            <a href="#">我的足迹</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <i class="far fa-cart-plus"></i>
+          <a [routerLink]="['/login']"><span>购物车</span></a>
+          <span><i class="fas fa-chevron-down"></i></span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <i class="fas fa-star"></i>
+          <a [routerLink]="['/login']"><span>收藏夹</span></a>
+          <span><i class="fas fa-chevron-down"></i></span>
+        </div>
+        <div class="site-nav-menu-bd site-nav-menu-list">
+          <div>
+            <a href="#">收藏的宝贝</a>
+            <a href="#">收藏的店铺</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="#">商品分类</a>
+        </div>
+      </li>
+      <li> | </li>
+      <li>
+        <div>
+          <a href="#"><span>千牛卖家中心</span></a>
+          <span><i class="fas fa-chevron-down"></i></span>
+        </div>
+        <div class="site-nav-menu-bd site-nav-menu-list">
+          <div>
+            <a href="#">免费开店</a>
+            <a href="#">已卖出的宝贝</a>
+            <a href="#">出售中的宝贝</a>
+          </div>
+        </div>
+      </li>
       <li>联系客服</li>
+      <li>网站导航</li>
     </ul>
   </nav>
 </header>

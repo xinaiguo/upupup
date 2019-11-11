@@ -12,8 +12,13 @@
     width: 100px;
     height: 100px;
     background-color: #93a6c9;
-    border: 1px solid transparent;
     border-radius: 4px;
     text-align: center;
+  }
+
+  .taobao{
+    background-image: url('../../../assets/image/pic.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
