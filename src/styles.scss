@@ -30,16 +30,24 @@ a {
   text-decoration: none;
 }
 
-body{
-    background-color: #e4e9f2;
-    font-family: Open Sans,sans-serif;
-    font-size: 14px;
+body {
+  background-color: #e4e9f2;
+  font-family: Open Sans, sans-serif;
+  font-size: 14px;
 }
 
-.fl{
+.fl {
   float: left;
 }
 
-.fr{
+.fr {
   float: right;
+}
+
+.clearfix::after {
+  content: ' ';
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0;
 }
