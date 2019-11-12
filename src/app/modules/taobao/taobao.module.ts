@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { TaobaoRoutingModule } from './taobao-routing.module';
 import { TaobaoComponent } from './taobao.component';
+import { HeaderComponent } from './header/header.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   imports: [
     CommonModule,
     TaobaoRoutingModule
   ],
-  declarations: [TaobaoComponent]
+  declarations: [TaobaoComponent, HeaderComponent, SearchComponent]
 })
 export class TaobaoModule { }
