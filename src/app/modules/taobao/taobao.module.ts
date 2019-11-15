@@ -5,12 +5,13 @@ import { TaobaoRoutingModule } from './taobao-routing.module';
 import { TaobaoComponent } from './taobao.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   imports: [
     CommonModule,
     TaobaoRoutingModule
   ],
-  declarations: [TaobaoComponent, HeaderComponent, SearchComponent]
+  declarations: [TaobaoComponent, HeaderComponent, SearchComponent, MainComponent]
 })
 export class TaobaoModule { }
