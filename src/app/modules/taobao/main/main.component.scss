@@ -35,7 +35,6 @@
         .main-core{
             width: 492px;
             height: 512px;
-            background: darkseagreen;
             margin-top: 10px;
             margin-left: 10px;
             overflow: hidden;
@@ -47,6 +46,20 @@
                     width: 492px;
                     height: 280px;
                 }
+            }
+            .core-bottom{
+              width: 520px;
+              height: 230px;
+              background: olivedrab  ;
+              .core-botttom-t{
+                width: 492px;
+                height: 18px;
+                margin-top: 11px;
+                border-bottom: 3px solid #ff1648;
+                .core-botttom-t-img{
+                  background-image: url("../../../../assets/image/tianmao.png");
+                }
+              }
             }
         }
     }
