@@ -48,16 +48,48 @@
                 }
             }
             .core-bottom{
-              width: 520px;
+              width: 492px;
               height: 230px;
-              background: olivedrab  ;
               .core-botttom-t{
+                position: relative;
                 width: 492px;
-                height: 18px;
+                height: 21px;
                 margin-top: 11px;
                 border-bottom: 3px solid #ff1648;
                 .core-botttom-t-img{
-                  background-image: url("../../../../assets/image/tianmao.png");
+                  position: absolute;
+                  display: inline-block;
+                  width: 136px;
+                  height: 19px;
+                  background: url("../../../../assets/image/tianmao.png") 2px 0 no-repeat;
+                  background-size: 122px 22px;
+                }
+                em{
+                  margin-left: 136px;
+                  color: #666;
+                  font-size: 12px;
+                }
+                strong{
+                  position: absolute;
+                  right: 0;
+                  color: #666;
+                  font-size: 12px;
+                }
+              }
+              .core-botttom-b{
+                width: 492px;
+                height: 201px;
+                .core-bottom-b-l{
+                  width: 230px;
+                  height: 200px;
+                  margin-left: 0;
+                  margin-top: 10px;
+                }
+                .core-bottom-b-r{
+                  width: 230px;
+                  height: 200px;
+                  margin-right: 0;
+                  margin-top: 10px;
                 }
               }
             }
