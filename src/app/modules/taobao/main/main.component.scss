@@ -97,7 +97,79 @@
     }
     .main-right{
         width: 290px;
-        height: 100%;
+        height: 522px;
+        margin-top: 10px;
         background: darkkhaki;
+        .right-one{
+          height: 145px;
+          background: url("../../../../assets/image/img2.png") 0 0 no-repeat;
+          background-size:290px 145px ;
+          .member-top{
+            height: 91px;
+            text-align: center;
+            font-size: 12px;
+              .avatar-pic{
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background: orange;
+                border-radius: 50%;;
+                border: 3px solid #FFF;
+              }
+              .tjb{
+                a{
+                  color:#ff5000!important;;
+                  background: #ffe4db;
+                  border-radius: 9px;
+                  padding: 0 10px 0 20px;
+                }
+
+              }
+          }
+
+          .member-bottom{
+            width: 275px;
+            height: 25px;
+            padding-left: 15px;
+            margin-top:8px;
+            text-align: center;
+            .member-btn{
+              display: inline-block;
+              width: 79px;
+              height: 25px;
+              background-image: linear-gradient(to right,#ff5000 0,#ff6f06 100%);
+              line-height: 25px;
+              border-radius: 4px;
+              font-weight: 700;
+              margin-right: 7px;
+              color:#FFF;
+              font-size: 14px;
+            }
+          }
+
+        }
+        .right-two{
+          height: 26px;
+          background: #ffe4dd;
+          text-align: center;
+          a{
+            color: #f40;
+            font-size: 12px;
+            line-height: 26px;
+          }
+
+        }
+        .right-three{
+          height: 98px;
+          background: rgb(189, 180, 163);
+        }
+        .right-four{
+          height: 155px;
+          background: rgb(102, 97, 88);
+        }
+        .right-five{
+          height: 76px;
+          background: rgb(153, 133, 96);
+        }
     }
 }
