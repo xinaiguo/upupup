@@ -1,8 +1,7 @@
 .main {
   width: 990px;
-  height: 522px;
+  height: 100%;
   margin: 0 auto;
-  background: #FFF;
 
   .main-left {
     width: 700px;
@@ -112,8 +111,9 @@
 
   .main-right {
     width: 290px;
-    height: 522px;
+    height: 100%;
     margin-top: 10px;
+    background: #FFF;
     .right-one {
       height: 145px;
       background: url("../../../../assets/image/img2.png") 0 0 no-repeat;
@@ -228,14 +228,17 @@
 
     .right-four {
       height: 155px;
+      border-top: 1px solid #f4f4f4;
       .conve-list{
         li{
           float: left;
-          width: 70px;
+          width: 72px;
           height: 75px;
-          border: 1px solid rgb(122, 119, 119);
+          border: 1px solid #f4f4f4;
           text-align: center;
           padding-top: 10px;
+          border-left-color: transparent;
+          border-top-color: transparent;
           i{
             display: inline-block;
             margin-bottom: 8px;
@@ -252,9 +255,26 @@
       height: 76px;
       h3{
         font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 14px;
+        .more{
+          float: right;
+          font-size: 12px;
+          padding-right: 10px;
+          font-weight: 400;
+          color: #3C3C3C;
+          i{
+            margin-left: 4px;
+            font-size: 8px;
+
+          }
+        }
       }
+
       .app-list{
-        margin:8px 12px;
+        padding-left: 23px;
+        height: 44px;
       }
       li{
         margin-right: 21px;
