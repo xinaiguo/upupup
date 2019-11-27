@@ -7,6 +7,7 @@
     width: 700px;
 
     .main-list {
+      background: #FFF;
       position: relative;
       width: 190px;
       height: 522px;
@@ -88,6 +89,7 @@
         }
 
         .core-botttom-b {
+          background: #FFF;
           width: 492px;
           height: 201px;
 
@@ -111,9 +113,10 @@
 
   .main-right {
     width: 290px;
-    height: 100%;
+    height: 512px;
     margin-top: 10px;
     background: #FFF;
+
     .right-one {
       height: 145px;
       background: url("../../../../assets/image/img2.png") 0 0 no-repeat;
@@ -194,8 +197,8 @@
         }
       }
 
-      .notice2:hover{
-        .notice-list2{
+      .notice2:hover {
+        .notice-list2 {
           display: block;
         }
 
@@ -211,16 +214,19 @@
           margin: 5px 10px;
         }
 
-        .notice-list2{
+        .notice-list2 {
           display: none;
         }
-        .notice-list3{
+
+        .notice-list3 {
           display: none;
         }
-        .notice-list4{
+
+        .notice-list4 {
           display: none;
         }
-        .notice-list5{
+
+        .notice-list5 {
           display: none;
         }
       }
@@ -229,8 +235,9 @@
     .right-four {
       height: 155px;
       border-top: 1px solid #f4f4f4;
-      .conve-list{
-        li{
+
+      .conve-list {
+        li {
           float: left;
           width: 72px;
           height: 75px;
@@ -239,11 +246,13 @@
           padding-top: 10px;
           border-left-color: transparent;
           border-top-color: transparent;
-          i{
+
+          i {
             display: inline-block;
             margin-bottom: 8px;
           }
-          p{
+
+          p {
             color: #3C3C3C;
             font-size: 12px;
           }
@@ -253,18 +262,21 @@
 
     .right-five {
       height: 76px;
-      h3{
+
+      h3 {
         font-size: 14px;
         height: 30px;
         line-height: 30px;
         padding-left: 14px;
-        .more{
+
+        .more {
           float: right;
           font-size: 12px;
           padding-right: 10px;
           font-weight: 400;
           color: #3C3C3C;
-          i{
+
+          i {
             margin-left: 4px;
             font-size: 8px;
 
@@ -272,17 +284,19 @@
         }
       }
 
-      .app-list{
+      .app-list {
         padding-left: 23px;
         height: 44px;
       }
-      li{
+
+      li {
         margin-right: 21px;
         margin-bottom: 8px;
         width: 32px;
         height: 32px;
         float: left;
-        img{
+
+        img {
           // float: left;
           width: 32px;
           height: 32px;

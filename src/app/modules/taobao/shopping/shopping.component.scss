@@ -1,0 +1,152 @@
+.layer {
+  margin: 0 auto;
+  width: 990px;
+  background: rosybrown;
+
+  .layer-inner {
+    margin-top: 10px;
+
+    .tbh-qiang {
+      height: 264px;
+      overflow: hidden;
+      background-color: #FFF;
+
+      .qiang-inner {
+        padding-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        .mod-hd em {
+          display: none;
+        }
+
+        .mlogo {
+          margin-left: 5px;
+          height: 22px;
+        }
+
+        p {
+          line-height: 24px;
+          font-weight: 400;
+          font-size: 12px;
+          color: #999;
+
+          .ml6 {
+            margin-left: 6px;
+          }
+        }
+
+        .tb-fn {
+          position: absolute;
+          top: 0;
+          right: 20px;
+          line-height: 24px;
+          height: 24px;
+          font-size: 12px;
+          color: #999;
+          width: 100px;
+          text-align: right;
+
+          .switch {
+            font-weight: 400;
+            cursor: pointer;
+          }
+
+          .more {
+            margin-left: 14px;
+            color: inherit;
+          }
+        }
+
+        li {
+          float: left;
+          padding: 0 10px 0 10px;
+          width: 310px;
+
+          .img-wrapper {
+            float: left;
+            margin: 16px 0;
+
+            img {
+              width: 148px;
+              height: 148px;
+              opacity: .9;
+            }
+          }
+
+          .info {
+            margin-left: 162px;
+            overflow: hidden;
+
+            h4 {
+              margin-top: 11px;
+              line-height: 22px;
+              height: 44px;
+              overflow: hidden;
+              font-size: 16px;
+              color: #333;
+              font-weight: normal;
+            }
+
+            .title {
+              margin-top: 12px;
+              line-height: 28px;
+              color: #999;
+            }
+
+            .progress {
+              position: relative;
+              width: 159px;
+              height: 6px;
+              border-radius: 3px;
+              background-clip: padding-box;
+              background: #FFE4Dc;
+
+              .progress-bar {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 6px;
+                border-radius: 3px;
+                background: #FE3338;
+              }
+
+            }
+
+            .desc {
+              line-height: 28px;
+              height: 28px;
+              color: #FE3338;
+              font-size: 12px;
+
+              .letter {
+                float: right;
+                text-align: right;
+              }
+            }
+
+            .extra {
+              .yan {
+                font-size: 12px;
+                color: #ff5000;
+              }
+
+              .cur {
+                font-size: 20px;
+                color: #ff5000;
+              }
+
+              .price {
+                color: #999;
+                margin-left: 6px;
+                text-decoration: line-through;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
