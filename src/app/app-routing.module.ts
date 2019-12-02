@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'taobao',
     loadChildren: './modules/taobao/taobao.module#TaobaoModule'
+  },
+  {
+    path: 'taskmanager',
+    loadChildren: './modules/taskmgr/taskmgr.module#TaskmgrModule'
   }
 ];
 

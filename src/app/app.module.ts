@@ -9,6 +9,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeModule } from './modules/home/home.module';
 import { TaobaoModule } from './modules/taobao/taobao.module';
+import { TaskmgrModule } from './modules/taskmgr/taskmgr.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +22,8 @@ import { TaobaoModule } from './modules/taobao/taobao.module';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TaskmgrModule
   ],
   providers: [],
   bootstrap: [AppComponent]
