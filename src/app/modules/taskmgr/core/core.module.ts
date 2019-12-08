@@ -1,19 +1,25 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { MatToolbarModule } from '@angular/material';
+import { MatIconRegistry } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
+import { loadSvgResources } from '../util/svg.util';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    MatToolbarModule
+    HttpClientModule,
+    SharedModule,
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    SharedModule
   ],
   declarations: [
     HeaderComponent,
@@ -21,4 +27,8 @@ import { MatToolbarModule } from '@angular/material';
     SidebarComponent
   ]
 })
-export class CoreModule { }
+export class CoreModule {
+  constructor(ir: MatIconRegistry, ds: DomSanitizer) {
+    loadSvgResources(ir, ds);
+  }
+}
