@@ -1,14 +1,21 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>login:</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <mat-input-container>
-      <input matInput type="text" placeholder="your email">
-    </mat-input-container>
-  </mat-card-content>
-  <mat-card-actions>
-    <p>No account?<a href="#">Register</a></p>
-    <p>Forgot Password?<a href="#">find</a></p>
-  </mat-card-actions>
-</mat-card>
+<form>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>login:</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-input-container class="full-width">
+        <input matInput type="text" placeholder="your email">
+        <span matSuffix>@163.com</span>
+      </mat-input-container>
+      <mat-input-container class="full-width">
+        <input matInput type="password" placeholder="your password">
+      </mat-input-container>
+      <button mat-raised-button type="button">Log In</button>
+    </mat-card-content>
+    <mat-card-actions class="text-align">
+      <p>No account?<a href="#">Register</a></p>
+      <p>Forgot Password?<a href="#">find</a></p>
+    </mat-card-actions>
+  </mat-card>
+</form>

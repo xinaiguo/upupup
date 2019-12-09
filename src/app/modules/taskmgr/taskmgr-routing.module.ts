@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TaskmgrComponent } from './taskmgr.component';
 import { LoginComponent } from './login/login/login.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: './login/login.module#LoginModule'
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    outlet: 'jira'
   }
 ];
 

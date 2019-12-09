@@ -6,6 +6,7 @@ import { MatSidenavModule } from '@angular/material';
 
 import { TaskmgrRoutingModule } from './taskmgr-routing.module';
 import { TaskmgrComponent } from './taskmgr.component';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { TaskmgrComponent } from './taskmgr.component';
     TaskmgrRoutingModule,
     SharedModule,
     CoreModule,
-    MatSidenavModule
+    MatSidenavModule,
+    LoginModule
   ],
   declarations: [TaskmgrComponent]
 })
