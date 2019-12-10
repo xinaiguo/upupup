@@ -19,7 +19,8 @@ import { MatToolbarModule, MatIconModule, MatButtonModule, MatCardModule, MatInp
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatListModule
   ],
   declarations: []
 })
