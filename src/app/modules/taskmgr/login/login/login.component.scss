@@ -1,15 +1,14 @@
 form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 
   mat-card {
-    width: 22em;
-    margin: 5px;
-    flex: 0 0 22em;
+    height: 23em;
+    flex: 0 0 20em;
 
     .full-width {
       width: 100%;
@@ -17,7 +16,7 @@ form {
 
     .text-align{
       text-align: end;
-      margin: 6px;
+      margin: 10px;
     }
   }
 }
