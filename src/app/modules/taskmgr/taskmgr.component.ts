@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./taskmgr.component.scss']
 })
 export class TaskmgrComponent implements OnInit {
-
+  darkTheme = false;
+  switchTheme(dark){
+    this.darkTheme = dark;
+  }
   constructor() { }
 
   ngOnInit() {

@@ -4,5 +4,5 @@
   </button>
   <span>JIRA</span>
   <span class="fill-remaining-space"></span>
-  <mat-slide-toggle></mat-slide-toggle>
+  <mat-slide-toggle (change)="onChange($event.checked)">Dark Theme</mat-slide-toggle>
 </mat-toolbar>
