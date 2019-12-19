@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskmgrComponent implements OnInit {
   darkTheme = false;
-  switchTheme(dark){
+  switchTheme(dark) {
     this.darkTheme = dark;
   }
   constructor() { }

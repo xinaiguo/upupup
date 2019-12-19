@@ -1,7 +1,7 @@
 <form>
   <mat-card>
     <mat-card-header>
-      <mat-card-title>login:</mat-card-title>
+      <mat-card-title>Login:</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <mat-input-container class="full-width">
@@ -14,7 +14,7 @@
       <button mat-raised-button color="primary" type="button">Log In</button>
     </mat-card-content>
     <mat-card-actions class="text-align">
-      <p>No account?<a href="#">Register</a></p>
+      <p>No account?<a [routerLink]="['/taskmanager/register']" >Register</a></p>
       <p>Forgot Password?<a href="#">find</a></p>
     </mat-card-actions>
   </mat-card>

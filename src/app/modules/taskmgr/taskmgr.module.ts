@@ -1,3 +1,4 @@
+import { ProjectModule } from './project/project.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { NgModule } from '@angular/core';
@@ -15,7 +16,8 @@ import { LoginModule } from './login/login.module';
     SharedModule,
     CoreModule,
     MatSidenavModule,
-    LoginModule
+    LoginModule,
+    ProjectModule
   ],
   declarations: [TaskmgrComponent]
 })
