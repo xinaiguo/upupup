@@ -1,0 +1,12 @@
+form {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow: hidden;
+
+  .full-width {
+    width: 100%;
+  }
+}
