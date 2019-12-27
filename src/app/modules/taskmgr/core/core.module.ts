@@ -8,6 +8,7 @@ import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 import { loadSvgResources } from '../util/svg.util';
 import { SharedModule } from '../shared/shared.module';
+import 'hammerjs';
 
 @NgModule({
   imports: [

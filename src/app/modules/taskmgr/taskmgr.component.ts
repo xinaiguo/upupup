@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-taskmgr',
@@ -9,8 +10,9 @@ export class TaskmgrComponent implements OnInit {
   darkTheme = false;
   switchTheme(dark) {
     this.darkTheme = dark;
+    this.oc.getContainerElement().classList.add(dark ? 'myapp-dark-theme' : null);
   }
-  constructor() { }
+  constructor(private oc: OverlayContainer) { }
 
   ngOnInit() {
   }

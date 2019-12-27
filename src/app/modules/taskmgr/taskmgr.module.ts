@@ -1,3 +1,4 @@
+import { TaskModule } from './task/task.module';
 import { ProjectModule } from './project/project.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
@@ -17,7 +18,8 @@ import { LoginModule } from './login/login.module';
     CoreModule,
     MatSidenavModule,
     LoginModule,
-    ProjectModule
+    ProjectModule,
+    TaskModule
   ],
   declarations: [TaskmgrComponent]
 })

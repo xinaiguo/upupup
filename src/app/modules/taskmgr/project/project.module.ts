@@ -7,6 +7,7 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectItemComponent } from './project-item/project-item.component';
 import { NewProjectComponent } from './new-project/new-project.component';
 import { InviteComponent } from './invite/invite.component';
+import { ConfirmDialogComponent } from '../shared/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { InviteComponent } from './invite/invite.component';
   ],
   entryComponents: [
     NewProjectComponent,
-    InviteComponent
+    InviteComponent,
+    ConfirmDialogComponent
   ]
 })
 export class ProjectModule { }
