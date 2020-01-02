@@ -9,6 +9,7 @@ import { MatSidenavModule } from '@angular/material';
 import { TaskmgrRoutingModule } from './taskmgr-routing.module';
 import { TaskmgrComponent } from './taskmgr.component';
 import { LoginModule } from './login/login.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { LoginModule } from './login/login.module';
     MatSidenavModule,
     LoginModule,
     ProjectModule,
-    TaskModule
+    TaskModule,
+    BrowserAnimationsModule
   ],
   declarations: [TaskmgrComponent]
 })
