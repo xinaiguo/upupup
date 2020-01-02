@@ -8,7 +8,7 @@ import { trigger, state, transition, style, animate } from '@angular/animations'
   styleUrls: ['./taskmgr.component.scss'],
   animations: [
     trigger('square', [
-      state('green', style({ 'backgroud-color': 'green', 'height': '100px', 'transform': 'translateX(0)' })),
+      state('green', style({ 'background-color': 'green', 'height': '100px', 'transform': 'translateX(0)' })),
       state('red', style({ 'background-color': 'red', 'height': '50px', 'transform': 'translateX(100%)' })),
       transition('green=>red', animate('.2s 1s')),
       transition('red=>green', animate(1000)),

@@ -15,7 +15,6 @@ import { TaskmgrModule } from './modules/taskmgr/taskmgr.module';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     AuthModule,
     HomeModule,
     TaobaoModule,
@@ -23,7 +22,8 @@ import { TaskmgrModule } from './modules/taskmgr/taskmgr.module';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    TaskmgrModule
+    TaskmgrModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

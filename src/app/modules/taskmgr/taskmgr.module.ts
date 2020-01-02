@@ -21,7 +21,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginModule,
     ProjectModule,
     TaskModule,
-    BrowserAnimationsModule
   ],
   declarations: [TaskmgrComponent]
 })
