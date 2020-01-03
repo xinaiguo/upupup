@@ -1,16 +1,19 @@
 import { NewTaskListComponent } from './../new-task-list/new-task-list.component';
 import { NewTaskComponent } from './../new-task/new-task.component';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { CopyTaskComponent } from '../copy-task/copy-task.component';
 import { ConfirmDialogComponent } from '../../shared/confirm-dialog/confirm-dialog.component';
+import { slideToRight } from '../../anims/router.anim';
 
 @Component({
   selector: 'app-task-home',
   templateUrl: './task-home.component.html',
-  styleUrls: ['./task-home.component.scss']
+  styleUrls: ['./task-home.component.scss'],
+  animations: [slideToRight]
 })
 export class TaskHomeComponent implements OnInit {
+  @HostBinding('@routeAnim') state;
 
   lists = [
     {
@@ -113,7 +116,7 @@ export class TaskHomeComponent implements OnInit {
   }
 
   launchNewTaskDialog() {
-    const dialogRef = this.dialog.open(NewTaskComponent, { data: { title: 'New task'} });
+    const dialogRef = this.dialog.open(NewTaskComponent, { data: { title: 'New task' } });
   }
 
   launchCopyTaskDialog() {
@@ -124,21 +127,21 @@ export class TaskHomeComponent implements OnInit {
     const dialogRef = this.dialog.open(NewTaskComponent, { data: { title: 'Edit task', task: task } });
   }
 
-  launchConfirmDialog(){
+  launchConfirmDialog() {
     const dialogRef = this.dialog.open(ConfirmDialogComponent,
       { data: { title: 'Delete List', content: 'Do you really want to delete this task list?' } });
     dialogRef.afterClosed().subscribe(result => console.log(result));
   }
 
-  launchEditListDialog(){
+  launchEditListDialog() {
     const dialogRef = this.dialog.open(NewTaskListComponent,
-      { data: { title: 'Edit list name'} });
+      { data: { title: 'Edit list name' } });
     dialogRef.afterClosed().subscribe(result => console.log(result));
   }
 
-  launchNewListDialog(){
+  launchNewListDialog() {
     const dialogRef = this.dialog.open(NewTaskListComponent,
-      { data: { title: 'New list '} });
+      { data: { title: 'New list ' } });
     dialogRef.afterClosed().subscribe(result => console.log(result));
   }
 
