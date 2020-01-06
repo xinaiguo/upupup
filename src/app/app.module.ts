@@ -1,5 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -10,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeModule } from './modules/home/home.module';
 import { TaobaoModule } from './modules/taobao/taobao.module';
 import { TaskmgrModule } from './modules/taskmgr/taskmgr.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +23,7 @@ import { TaskmgrModule } from './modules/taskmgr/taskmgr.module';
     FormsModule,
     ReactiveFormsModule,
     TaskmgrModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

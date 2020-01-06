@@ -1,12 +1,12 @@
 <mat-list>
   <h3 mat-subheader>Project</h3>
-  <mat-list-item>
+  <mat-list-item [routerLink]="['/project']" (click)="onNavClick()">
     <mat-icon mat-list-icon svgIcon="projects" ></mat-icon>
     <span mat-line> Project Home</span>
     <span mat-line mat-subheader> view all projects</span>
   </mat-list-item>
   <h3 mat-subheader>Calendar</h3>
-  <mat-list-item>
+  <mat-list-item [routerLink]="['/task']">
     <mat-icon mat-list-icon svgIcon="month"></mat-icon>
     <span mat-line> Monthly</span>
     <span mat-line mat-subheader> View your tasks monthly</span>

@@ -9,18 +9,22 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { loadSvgResources } from '../util/svg.util';
 import { SharedModule } from '../shared/shared.module';
 import 'hammerjs';
+import { TaskmgrRoutingModule } from '../taskmgr-routing.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
     HttpClientModule,
     SharedModule,
+    TaskmgrRoutingModule,
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    SharedModule
+    SharedModule,
+    TaskmgrRoutingModule,
   ],
   declarations: [
     HeaderComponent,
