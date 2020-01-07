@@ -1,5 +1,5 @@
 import { listAnimation } from './../../anims/list.anim';
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewProjectComponent } from '../new-project/new-project.component';
 import { InviteComponent } from '../invite/invite.component';
@@ -10,7 +10,8 @@ import { slideToRight } from '../../anims/router.anim';
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
   styleUrls: ['./project-list.component.scss'],
-  animations: [slideToRight, listAnimation]
+  animations: [slideToRight, listAnimation],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectListComponent implements OnInit {
 
@@ -31,7 +32,7 @@ export class ProjectListComponent implements OnInit {
     }
   ];
 
-  constructor(public dialog: MatDialog) { }
+  constructor(private dialog: MatDialog, private cd: ChangeDetectorRef ) { }
 
   ngOnInit() {
   }
@@ -42,9 +43,10 @@ export class ProjectListComponent implements OnInit {
       console.log(result);
       // tslint:disable-next-line: max-line-length
       this.projects = [...this.projects,
-        { id: '3', name: 'a new project', desc: 'this is a new project', coverImg: '../../../../../assets/image/covers/8.jpg' },
-        { id: '4', name: 'another new project', desc: 'this is another project', coverImg: '../../../../../assets/image/covers/3.jpg' }];
+      { id: '3', name: 'a new project', desc: 'this is a new project', coverImg: '../../../../../assets/image/covers/8.jpg' },
+      { id: '4', name: 'another new project', desc: 'this is another project', coverImg: '../../../../../assets/image/covers/3.jpg' }];
     });
+    this.cd.markForCheck();
   }
 
   launchInviteDialog() {
@@ -62,6 +64,7 @@ export class ProjectListComponent implements OnInit {
       console.log(result);
       this.projects = this.projects.filter(p => p.id !== project.id);
     });
+    this.cd.markForCheck();
   }
 
 }
