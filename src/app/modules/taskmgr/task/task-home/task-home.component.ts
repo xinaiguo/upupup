@@ -20,6 +20,7 @@ export class TaskHomeComponent implements OnInit {
     {
       id: 1,
       name: 'TO DO',
+      order: 1,
       tasks: [
         {
           id: 1,
@@ -51,6 +52,7 @@ export class TaskHomeComponent implements OnInit {
     {
       id: 2,
       name: 'IN PROGRESS',
+      order: 2,
       tasks: [
         {
           id: 1,
@@ -81,6 +83,7 @@ export class TaskHomeComponent implements OnInit {
     {
       id: 3,
       name: 'DONE',
+      order: 3,
       tasks: [
         {
           id: 1,
@@ -111,7 +114,7 @@ export class TaskHomeComponent implements OnInit {
 
   ];
 
-  constructor(private dialog: MatDialog, private cd: ChangeDetectorRef ) { }
+  constructor(private dialog: MatDialog, private cd: ChangeDetectorRef) { }
 
   ngOnInit() {
   }
@@ -146,4 +149,23 @@ export class TaskHomeComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => console.log(result));
   }
 
+  handleMove(srcData, targetList) {
+    switch (srcData.tag) {
+      case 'task-item':
+        console.log('handling item');
+        break;
+      case 'task-list':
+        console.log('handling-list');
+        const srcList = srcData.data;
+        const tempOrder = srcList.order;
+        srcList.order = targetList.order;
+        targetList.order = tempOrder;
+      default:
+        break;
+    }
+  }
+
+  handleQuickTask(desc: string) {
+    console.log(desc);
+  }
 }
