@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, Output, EventEmitter } from '@angular/core';
+import { Component, HostListener, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-quick-task',
