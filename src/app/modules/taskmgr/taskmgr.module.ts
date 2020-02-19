@@ -14,7 +14,7 @@ import { LoginModule } from './login/login.module';
     CoreModule,
     LoginModule,
     ProjectModule,
-    TaskModule,
+    TaskModule
   ],
   declarations: [TaskmgrComponent]
 })

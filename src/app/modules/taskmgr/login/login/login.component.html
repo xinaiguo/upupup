@@ -1,5 +1,5 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit(form,$event)">
-  <mat-card>
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit(form,$event)">
+  <mat-card class="card">
     <mat-card-header>
       <mat-card-title>Login:</mat-card-title>
     </mat-card-header>
@@ -18,18 +18,18 @@
       <p>Forgot Password?<a href="#">find</a></p>
     </mat-card-actions>
   </mat-card>
-  <mat-card>
+  <mat-card class="card">
     <mat-card-header>
       <mat-card-title>
-        upupup
+        每日名言
       </mat-card-title>
       <mat-card-subtitle>
-        好好学习，天天向上
+        {{quote.cn}}
       </mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="../../../../../assets/image/hongmei.jpg" art="">
+    <img mat-card-image [src]="quote.pic" art="quote image">
     <mat-card-content>
-     Good good study , day day up 
+     {{quote.en}}
     </mat-card-content>
   </mat-card>
 </form>

@@ -10,6 +10,7 @@ import { loadSvgResources } from '../util/svg.util';
 import { SharedModule } from '../shared/shared.module';
 import 'hammerjs';
 import { TaskmgrRoutingModule } from '../taskmgr-routing.module';
+import { ServicesModule } from '../services/services.module';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { TaskmgrRoutingModule } from '../taskmgr-routing.module';
     HttpClientModule,
     SharedModule,
     TaskmgrRoutingModule,
+    ServicesModule.forRoot(),
   ],
   exports: [
     HeaderComponent,
@@ -30,6 +32,13 @@ import { TaskmgrRoutingModule } from '../taskmgr-routing.module';
     HeaderComponent,
     FooterComponent,
     SidebarComponent
+  ],
+  providers: [
+    {
+      provide: 'BASE_CONFIG', useValue: {
+        uri: 'http://localhost:3333'
+      }
+    }
   ]
 })
 export class CoreModule {
