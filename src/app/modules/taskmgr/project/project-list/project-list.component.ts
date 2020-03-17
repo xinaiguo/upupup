@@ -1,3 +1,4 @@
+import { ProjectService } from './../../services/project.service';
 import { listAnimation } from './../../anims/list.anim';
 import { Component, OnInit, HostBinding, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { MatDialog } from '@angular/material';
@@ -17,24 +18,12 @@ export class ProjectListComponent implements OnInit {
 
   @HostBinding('@routeAnim') state;
 
-  projects = [
-    {
-      id: '1',
-      name: 'project 1',
-      desc: 'project1 describe',
-      coverImg: '../../../../../assets/image/covers/0.jpg'
-    },
-    {
-      id: '2',
-      name: 'project 2',
-      desc: 'project2 describe',
-      coverImg: '../../../../../assets/image/covers/1.jpg'
-    }
-  ];
+  projects;
 
-  constructor(private dialog: MatDialog, private cd: ChangeDetectorRef ) { }
+  constructor(private dialog: MatDialog, private cd: ChangeDetectorRef, private service$: ProjectService) { }
 
   ngOnInit() {
+    this.service$.get('1').subscribe(project => this.projects = project);
   }
 
   openNewProjectDialog() {
