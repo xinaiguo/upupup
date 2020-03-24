@@ -38,8 +38,7 @@ export class TaskListService {
   get(projectId: string): Observable<any> {
     const uri = `${this.config.uri}/${this.domain}`;
     return this.http
-      .get(uri, { params: { 'projectId': projectId } })
-      .map(res => res);
+      .get(uri, { params: { 'projectId': projectId } });
   }
 
   swapOrder(src: TaskList, target: TaskList): Observable<any> {

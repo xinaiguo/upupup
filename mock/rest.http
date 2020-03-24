@@ -19,3 +19,6 @@ Content-Type: application/json
     "order":1,
     "projectId":"1"
 }
+
+###
+GET http://localhost:3333/users?projectId='1'

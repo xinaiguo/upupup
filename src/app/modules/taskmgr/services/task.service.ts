@@ -17,8 +17,7 @@ export class TaskService {
     task.id = null;
     const uri = `${this.config.uri}/${this.domain}`;
     return this.http
-      .post(uri, JSON.stringify(task), { headers: this.headers })
-      .map(res => res);
+      .post(uri, JSON.stringify(task), { headers: this.headers });
   }
 
   update(task: Task): Observable<any> {
@@ -33,8 +32,7 @@ export class TaskService {
       remark: task.remark
     };
     return this.http
-      .patch(uri, JSON.stringify(toUpdate), { headers: this.headers })
-      .map(res => res);
+      .patch(uri, JSON.stringify(toUpdate), { headers: this.headers });
   }
 
   del(task: Task): Observable<Task> {
@@ -45,8 +43,7 @@ export class TaskService {
   get(taskListId: string): Observable<any> {
     const uri = `${this.config.uri}/${this.domain}`;
     return this.http
-      .get(uri, { params: { 'taskListId': taskListId } })
-      .map(res => res);
+      .get(uri, { params: { 'taskListId': taskListId } });
   }
 
   getByLists(lists: TaskList[]): Observable<any> {
@@ -58,21 +55,19 @@ export class TaskService {
   complete(task: Task): Observable<any> {
     const uri = `${this.config.uri}/${this.domain}/${task.id}`;
     return this.http
-      .patch(uri, JSON.stringify({ completed: task.completed }), { headers: this.headers })
-      .map(res => res);
+      .patch(uri, JSON.stringify({ completed: task.completed }), { headers: this.headers });
   }
 
   move(taskId: string, taskListId: string): Observable<any> {
     const uri = `${this.config.uri}/${this.domain}/${taskId}`;
     return this.http
-      .patch(uri, JSON.stringify({ taskListId: taskListId }), { headers: this.headers })
-      .map(res => res);
+      .patch(uri, JSON.stringify({ taskListId: taskListId }), { headers: this.headers });
   }
 
-  // moveAll(srcListId: string, targerListId: string): Observable<Task[]> {
-  //   return this.get(srcListId)
-  //     .mergeMap(tasks => Observable.from(tasks))  // 将取到的所有tasks数组转化成task流
-  //     .mergeMap(task => this.move(task.id, targerListId))
-  //     .reduce((arr: Task[], task) => [...arr, task], []);
-  // }
+  moveAll(srcListId: string, targerListId: string): Observable<Task[]> {
+    return this.get(srcListId)
+      .mergeMap(tasks => Observable.from(tasks))  // 将取到的所有tasks数组转化成task流
+      .mergeMap((task: Task) => this.move(task.id, targerListId))
+      .reduce((arr: Task[], task) => [...arr, task], []);
+  }
 }
