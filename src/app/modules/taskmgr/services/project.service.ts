@@ -8,12 +8,12 @@ export class ProjectService {
 
   private readonly domain = 'projects';
   private headers = new HttpHeaders({
-    'Content-Type': 'application-json'
+    'Content-Type': 'application/json'
   });
   constructor(private http: HttpClient, @Inject('BASE_CONFIG') private config) { }
 
   add(project: Project): Observable<any> {
-    project.id = null;
+    // project.id = null;
     const uri = `${this.config.uri}/${this.domain}`;
     return this.http
       .post(uri, JSON.stringify(project), { headers: this.headers })
@@ -33,7 +33,7 @@ export class ProjectService {
   }
 
   del(project: Project): Observable<Project> {
-    const delTasks$ = Observable.from(project.taskLists)
+    const delTasks$ = Observable.from(project.taskLists ? project.taskLists : [])
       .mergeMap(listId => this.http.delete(`${this.config.uri}/taskLists/${listId}`))
       .count();
     return delTasks$
@@ -44,7 +44,7 @@ export class ProjectService {
   get(userId: string): Observable<any> {
     const uri = `${this.config.uri}/${this.domain}`;
     return this.http
-      .get(uri, { params: {'members_like': userId} })
+      .get(uri, { params: { 'members_like': userId } })
       .map(res => res);
   }
 }

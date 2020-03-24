@@ -11,9 +11,9 @@
       ]
     },
     {
-      "name": "某某公司 ERP 系统",
+      "name": "某某公司 ERP 系统1",
       "desc": "为某某公司开发的定制化 ERP 系统",
-      "coverImg": "/assets/image/covers/20.jpg",
+      "coverImg": "/assets/image/covers/2.jpg",
       "members": [
         "1"
       ],
@@ -23,6 +23,12 @@
         "BkWpk7jGZb",
         "H1fTyXjMWW"
       ]
+    },
+    {
+      "name": "testq",
+      "desc": "test",
+      "coverImg": "/assets/image/covers/30.jpg",
+      "id": "dlRRhVw"
     }
   ],
   "taskLists": [
@@ -119,5 +125,4 @@
       "pic": "/assets/image/quotes/9.jpg"
     }
   ]
-  
 }

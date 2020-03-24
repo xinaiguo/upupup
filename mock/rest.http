@@ -1,6 +1,14 @@
 GET http://localhost:3333/projects
 
 ###
+POST http://localhost:3333/projects
+Content-Type: application/json
+{
+    "name":"test",
+    "desc":"test",
+    "coverImg":"/assets/image/covers/12.jpg"}
+
+###
 GET http://localhost:3333/taskLists
 
 ###

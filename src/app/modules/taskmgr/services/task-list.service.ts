@@ -8,7 +8,7 @@ export class TaskListService {
 
   private readonly domain = 'taskLists';
   private headers = new HttpHeaders({
-    'Content-Type': 'application-json'
+    'Content-Type': 'application/json'
   });
   constructor(private http: HttpClient, @Inject('BASE_CONFIG') private config) { }
 
@@ -53,7 +53,7 @@ export class TaskListService {
       .map(res => res);
     return Observable
       .concat(drag$, drop$)
-      .reduce((arrs, list) => ([...arrs, list]), []);
+      .reduce((arrs: TaskList[], list) => ([...arrs, list]), []);
   }
 
 }
