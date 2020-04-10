@@ -1,14 +1,18 @@
+import { Subscription } from 'rxjs/Subscription';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { extractInfo, isValidAddr, getAddrByCode } from '../../util/identity.util';
+import { isValidDate } from '../../util/date.util';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent implements OnInit, OnDestroy {
   form: FormGroup;
   items: string[];
+  sub: Subscription;
   private readonly avatarName = 'avatars';
 
   constructor(private fb: FormBuilder) { }
@@ -23,8 +27,26 @@ export class RegisterComponent implements OnInit {
       password: ['', Validators.compose([Validators.required, Validators.maxLength(20)])],
       repeat: ['', Validators.required],
       avatar: [img],
-      dateOfBirth: ['1991-01-01']
+      dateOfBirth: ['1991-01-01'],
+      address: [],
+      identity: []
     });
+    const id$ = this.form.get('identity').valueChanges
+      .debounceTime(300)
+      .filter(v => this.form.get('identity').valid);
+      this.sub = id$.subscribe(id => {
+        const info = extractInfo(id.identityNo);
+        if (isValidAddr(info.addrCode)) {
+          const addr = getAddrByCode(info.addrCode);
+          this.form.patchValue({address: addr});
+          this.form.updateValueAndValidity({onlySelf: true, emitEvent: true});
+        }
+        if (isValidDate(info.dateOfBirth)) {
+          const date = info.dateOfBirth;
+          this.form.patchValue({dateOfBirth: date});
+          this.form.updateValueAndValidity({onlySelf: true, emitEvent: true});
+        }
+      });
   }
 
   onSubmit({ value, valid }, ev: Event) {
@@ -33,6 +55,12 @@ export class RegisterComponent implements OnInit {
       return;
     }
     console.log(value);
+  }
+
+  ngOnDestroy(){
+    if (this.sub) {
+      this.sub.unsubscribe();
+    }
   }
 
 }

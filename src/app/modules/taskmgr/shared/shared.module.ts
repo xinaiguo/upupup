@@ -21,13 +21,16 @@ import {
   MatSelectModule,
   MatSidenavModule,
   MatButtonToggleModule,
-  MatChipsModule
+  MatChipsModule,
+  MatTabsModule
 } from '@angular/material';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { DirectiveModule } from '../directive/directive.module';
 import { ImageListSelectComponent } from './image-list-select/image-list-select.component';
 import { AgeInputComponent } from './age-input/age-input.component';
 import { ChipsListComponent } from './chips-list/chips-list.component';
+import { IdentityInputComponent } from './identity-input/identity-input.component';
+import { AreaListComponent } from './area-list/area-list.component';
 
 
 @NgModule({
@@ -53,6 +56,7 @@ import { ChipsListComponent } from './chips-list/chips-list.component';
     MatSelectModule,
     MatSidenavModule,
     MatChipsModule,
+    MatTabsModule,
     DirectiveModule,
     FormsModule,
     ReactiveFormsModule,
@@ -79,13 +83,23 @@ import { ChipsListComponent } from './chips-list/chips-list.component';
     MatSelectModule,
     MatSidenavModule,
     MatChipsModule,
+    MatTabsModule,
     DirectiveModule,
     FormsModule,
     ReactiveFormsModule,
     ImageListSelectComponent,
     AgeInputComponent,
-    ChipsListComponent
+    ChipsListComponent,
+    IdentityInputComponent,
+    AreaListComponent
   ],
-  declarations: [ConfirmDialogComponent, ImageListSelectComponent, AgeInputComponent, ChipsListComponent]
+  declarations: [
+    ConfirmDialogComponent,
+    ImageListSelectComponent,
+    AgeInputComponent,
+    ChipsListComponent,
+    IdentityInputComponent,
+    AreaListComponent
+  ]
 })
 export class SharedModule { }

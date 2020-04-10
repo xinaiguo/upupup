@@ -57,8 +57,8 @@ export class UserService {
         return this.http.get(uri);
       })
       .filter((user: User) => user.projectIds.indexOf(project.id) === -1)
-      .switchMap((u: User) => this.addProjectRef(u, projectId))
-      .reduce((arr: [], curr) => [...arr, curr], []);
+      .switchMap((u: User) => this.addProjectRef(u, projectId));
+      // .reduce((arr: [], curr) => [...arr, curr], []);
   }
 
 }

@@ -1,34 +1,44 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit(form,$event)">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>Register:</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <mat-input-container class="full-width">
-        <input matInput type="text" placeholder="your email" formControlName="email">
-      </mat-input-container>
-      <mat-input-container class="full-width">
-        <input matInput type="text" placeholder="your name" formControlName="name">
-      </mat-input-container>
-      <mat-input-container class="full-width">
-        <input matInput type="password" placeholder="your password" formControlName="password">
-      </mat-input-container>
-      <mat-input-container class="full-width">
-        <input matInput type="password" placeholder="Confirm your password" formControlName="repeat">
-      </mat-input-container>
-      <app-image-list-select
-          [useSvgIcon]="true"
-          [cols]="6"
-          [title]="'select avatar：'"
-          [items]="items"
-          formControlName="avatar">
-      </app-image-list-select>
-      <app-age-input formControlName="dateOfBirth"></app-age-input>
-      <button mat-raised-button color="primary" type="button">Register</button>
-    </mat-card-content>
-    <mat-card-actions class="text-align">
-      <p>No account?<a [routerLink]="['/taskmanager/login']" >Log In</a></p>
-      <p>Forgot Password?<a href="#">find</a></p>
-    </mat-card-actions>
+  <mat-card class="card">
+    <mat-tab-group>
+      <mat-tab label="账号信息">
+        <mat-card-header>
+          <mat-card-title>Register:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-input-container class="full-width">
+            <input matInput type="text" placeholder="your email" formControlName="email">
+          </mat-input-container>
+          <mat-input-container class="full-width">
+            <input matInput type="text" placeholder="your name" formControlName="name">
+          </mat-input-container>
+          <mat-input-container class="full-width">
+            <input matInput type="password" placeholder="your password" formControlName="password">
+          </mat-input-container>
+          <mat-input-container class="full-width">
+            <input matInput type="password" placeholder="Confirm your password" formControlName="repeat">
+          </mat-input-container>
+          <app-image-list-select [useSvgIcon]="true" [cols]="6" [title]="'select avatar：'" [items]="items"
+            formControlName="avatar">
+          </app-image-list-select>
+          <button mat-raised-button color="primary" type="button">Register</button>
+        </mat-card-content>
+        <mat-card-actions class="text-align">
+          <p>No account?<a [routerLink]="['/taskmanager/login']">Log In</a></p>
+          <p>Forgot Password?<a href="#">find</a></p>
+        </mat-card-actions>
+      </mat-tab>
+      <mat-tab label="个人信息">
+        <div class="full-width control-padding">
+          <app-identity-input formControlName="identity"></app-identity-input>
+        </div>
+        <div class="full-width control-padding">
+          <app-age-input formControlName="dateOfBirth"></app-age-input>
+        </div>
+        <div class="full-width control-padding">
+          <app-area-list formControlName="address"></app-area-list>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
   </mat-card>
 </form>
