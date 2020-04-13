@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
       password: ['', Validators.compose([Validators.required, Validators.maxLength(20)])],
       repeat: ['', Validators.required],
       avatar: [img],
-      dateOfBirth: ['1991-01-01'],
+      dateOfBirth: [''],
       address: [],
       identity: []
     });

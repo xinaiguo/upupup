@@ -6,7 +6,7 @@
       <span class="remove-tag" (click)="removeMember(member)">x</span>
     </mat-chip>
   </mat-chip-list>
-  <mat-input-container *ngIf="dispalyInput" class="full-width">
+  <mat-input-container *ngIf="displayInput" class="full-width">
     <input matInput [placeholder]="placeholderText" [matAutocomplete]="autoMember"
       formControlName="memberSearch">
   </mat-input-container>

@@ -9,8 +9,6 @@ import {
   differenceInDays,
   differenceInMonths,
   differenceInYears,
-  parse,
-  format
 } from 'date-fns';
 import { isValidDate, toDate } from '../../util/date.util';
 import { Subscription } from 'rxjs/Subscription';
@@ -51,7 +49,7 @@ export class AgeInputComponent implements ControlValueAccessor, OnInit , OnDestr
   @Input() yearsBottom = 1;
   @Input() yearsTop = 150;
   @Input() debounceTime = 300;
-  @Input() format = 'yyyy-MM-dd';
+  // @Input() format = 'yyyy-MM-dd';
   form: FormGroup;
   ageUnits = [
     { value: AgeUnit.Year, label: '岁' },
@@ -67,10 +65,9 @@ export class AgeInputComponent implements ControlValueAccessor, OnInit , OnDestr
 
   ngOnInit() {
     const initDate = this.dateOfBirth ? this.dateOfBirth : toDate(subYears(Date.now(), 30));
-    console.log('initDate' + initDate);
     const initAge = this.toAge(initDate);
     this.form = this.fb.group({
-      birthday: [initDate, this.validateDate],
+      birthday: [initDate],
       age: this.fb.group({
         ageNum: [initAge.age],
         ageUnit: [initAge.unit]
@@ -82,7 +79,7 @@ export class AgeInputComponent implements ControlValueAccessor, OnInit , OnDestr
 
     const birthday$ = birthday.valueChanges
       .map(d => {
-        return { date: d, from: 'brithday' };
+        return { date: d, from: 'birthday' };
       })
       .debounceTime(this.debounceTime)
       .distinctUntilChanged()
@@ -107,7 +104,7 @@ export class AgeInputComponent implements ControlValueAccessor, OnInit , OnDestr
     const merged$ = Observable.merge(birthday$, age$).filter(_ => this.form.valid);
     this.sub = merged$.subscribe(d => {
       const age = this.toAge(d.date);
-      if (d.from === 'brithday') {
+      if (d.from === 'birthday') {
         if (age.age !== ageNum.value) {
           ageNum.patchValue(age.age, { emitEvent: false });
         }
@@ -135,7 +132,7 @@ export class AgeInputComponent implements ControlValueAccessor, OnInit , OnDestr
       return null;
     }
     return {
-      dateOfBirthInvalid: true
+      ageInvalid: true
     };
   }
 
