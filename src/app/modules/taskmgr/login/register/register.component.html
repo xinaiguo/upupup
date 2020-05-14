@@ -3,7 +3,7 @@
     <mat-tab-group>
       <mat-tab label="账号信息">
         <mat-card-header>
-          <mat-card-title>Register:</mat-card-title>
+          <mat-card-title>注册:</mat-card-title>
         </mat-card-header>
         <mat-card-content>
           <mat-input-container class="full-width">
@@ -18,14 +18,14 @@
           <mat-input-container class="full-width">
             <input matInput type="password" placeholder="Confirm your password" formControlName="repeat">
           </mat-input-container>
-          <app-image-list-select [useSvgIcon]="true" [cols]="6" [title]="'select avatar：'" [items]="items"
+          <app-image-list-select [useSvgIcon]="true" [cols]="6" [title]="'选择头像：'" [items]="items"
             formControlName="avatar">
           </app-image-list-select>
-          <button mat-raised-button color="primary" type="button">Register</button>
+          <button mat-raised-button color="primary" type="button">注册</button>
         </mat-card-content>
         <mat-card-actions class="text-align">
-          <p>No account?<a [routerLink]="['/taskmanager/login']">Log In</a></p>
-          <p>Forgot Password?<a href="#">find</a></p>
+          <p>没有账号?<a [routerLink]="['/taskmanager/login']">登录</a></p>
+          <p>忘记<a href="#">密码?</a></p>
         </mat-card-actions>
       </mat-tab>
       <mat-tab label="个人信息">

@@ -1,7 +1,7 @@
 <form class="form" [formGroup]="form" (ngSubmit)="onSubmit(form,$event)">
   <mat-card class="card">
     <mat-card-header>
-      <mat-card-title>Login:</mat-card-title>
+      <mat-card-title>登录:</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <mat-input-container class="full-width">
@@ -11,17 +11,17 @@
       <mat-input-container class="full-width">
         <input matInput type="password" placeholder="your password" formControlName="password">
       </mat-input-container>
-      <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Log In</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">登录</button>
     </mat-card-content>
     <mat-card-actions class="text-align">
-      <p>No account?<a [routerLink]="['/taskmanager/register']" >Register</a></p>
-      <p>Forgot Password?<a href="#">find</a></p>
+      <p>没有账号?<a [routerLink]="['/taskmanager/register']">注册</a></p>
+      <p>忘记<a href="#">密码?</a></p>
     </mat-card-actions>
   </mat-card>
   <mat-card class="card">
     <mat-card-header>
       <mat-card-title>
-        每日名言
+        每日佳句
       </mat-card-title>
       <mat-card-subtitle>
         {{quote.cn}}
@@ -29,7 +29,7 @@
     </mat-card-header>
     <img mat-card-image [src]="quote.pic" art="quote image">
     <mat-card-content>
-     {{quote.en}}
+      {{quote.en}}
     </mat-card-content>
   </mat-card>
 </form>
